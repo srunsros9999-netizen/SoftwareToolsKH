@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Digital Store Cambodia</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+    <div class="cart-icon" onclick="toggleCart()" style="
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+      ">
+        🛒 កន្រ្តក: <span id="cart-count">0</span>
+    </div>
+
+    <div class="header-MyProduct" style="text-align: center; padding: 20px; background: white">
+        <img src="img/A.1.jpg" alt="logo" class="logo-top" style="width: 100px; border-radius: 50%" />
+        <h1 class="Br">🔥 Premium Digital Products Store Cambodia 🔥</h1>
+        <a href="index.html" class="btn-home" style="
+          text-decoration: none;
+          background: #333;
+          color: white;
+          padding: 8px 20px;
+          border-radius: 5px;
+        ">HOME</a
+      >
+    </div>
+
+    <div class="menu-title" style="text-align: center">
+      <h2>🔥 MENU ពិសេស Software Tools 🔥</h2>
+    </div>
+
+    <div class="product-container">
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/Canvas.jpg" alt="Canvas Pro" />
+        <h3>Canvas Pro</h3>
+        <div class="benefits">
+          <p>
+            ✅អត្ថប្រយោជន៍៖ ប្រើប្រាស់គ្រប់ Tools, Templates និងរូបភាព Premium
+            បានទាំងអស់ដោយមិនមានជាប់ Watermark ងាយស្រួលសម្រាប់អ្នករចនា (Graphic
+            Design)។
+          </p>
+          <p>✅ Full Access គ្រប់ Tool</p>
+          <p>✅ គ្មាន Watermark</p>
+        </div>
+        <div class="price">តម្លៃ: <span> $2.50- $5.00 </span></div>
+        <button class="btn-buy" onclick="addToCart('Canvas Pro', 5.0)">
+          BUY NOW
+        </button>
+      </div>  
+
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/ChatGPT.jpg" alt="Chat GPT Plus" />
+        <h3>CHAT GPT PLUS</h3>
+        <div class="benefits">
+          <p>
+            ✅អត្ថប្រយោជន៍៖ ជាជំនួយការ AI ឆ្លាតវៃបំផុត ជួយដោះស្រាយលំហាត់
+            សរសេរកូដ បកប្រែភាសា និងវិភាគទិន្នន័យស្មុគស្មាញបានយ៉ាងរហ័ស
+            និងមានភាពត្រឹមត្រូវខ្ពស់។
+          </p>
+          <p>✅ ឆ្លាតវៃបំផុត</p>
+          <p>✅ ជំនួយការការងារ</p>
+        </div>
+        <div class="price">តម្លៃ: <span>$7.00 - $11</span></div>
+        <button class="btn-buy" onclick="addToCart('CHAT GPT PLUS', 7.0)">
+          BUY NOW
+        </button>
+      </div>
+
+      <!-- Gemini Pro -->
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/Gemini.jpg" alt="Gemini Pro" />
+        <h3>Gemini Pro</h3>
+        <div class="benefits">
+          <p>
+            ✅អត្ថប្រយោជន៍៖ AI ជំនាន់ថ្មីរបស់ Google ដែលមានល្បឿនលឿន
+            អាចភ្ជាប់ជាមួយសេវាកម្ម Google ផ្សេងៗ (Drive, Docs, Gmail)
+            ដើម្បីបង្កើនប្រសិទ្ធភាពការងារការិយាល័យ។
+          </p>
+          <p>✅ ប្រើ AI របស់ Google</p>
+          <p>✅ លឿនរហ័ស</p>
+        </div>
+        <div class="price">តម្លៃ: <span>$9.00 - $35.00</span></div>
+        <button class="btn-buy" onclick="addToCart('Gemini Pro', 35)">
+          BUY NOW
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/youtube.jpg" alt="Youtube Premium" />
+        <h3>Youtube Premium Family</h3>
+        <div class="benefits">
+          <p>
+            ✅អត្ថប្រយោជន៍៖ មើលវីដេអូបានដោយគ្មានការផ្សាយពាណិជ្ជកម្ម (No Ads)
+            អាចស្ដាប់តន្ត្រីក្នុង Background (ទោះបិទអេក្រង់ទូរស័ព្ទ) និងអាចទាញយក
+            (Download) ទុកមើលពេលអត់ Internet។
+          </p>
+          <p>✅Family Acoount can add 5 member</p>
+        </div>
+        <div class="price">តម្លៃ: <span>$2.50 - $5.00</span></div>
+        <button class="btn-buy" onclick="addToCart('Youtube Premium', 5.0)">
+          BUY NOW
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/Netflex.jpg" alt="Netflex 4K Family" />
+        <h3>Netflex 4K Family</h3>
+        <div class="benefits">
+          <p>
+            ✅អត្ថប្រយោជន៍៖ មើលភាពយន្ត
+            និងស៊េរីល្បីៗជុំវិញពិភពលោកក្នុងកម្រិតច្បាស់បំផុត (Ultra HD 4K)
+            ដោយមិនមានការរំខានពីការផ្សាយពាណិជ្ជកម្ម។
+          </p>
+          <p>✅ Family account can add 5 slot</p>
+          <p>✅ Ultra HD 4K</p>
+        </div>
+        <div class="price">តម្លៃ: <span>$9.00</span></div>
+        <button class="btn-buy" onclick="addToCart('Netflex 4K', 9.0)">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/Capcut.jpg" alt="Capcut Pro" />
+        <h3>Capcut Pro</h3>
+        <div class="benefits">
+          <p>
+            ✅អត្ថប្រយោជន៍៖ កម្មវិធីកាត់តវីដេអូដ៏ពេញនិយម អាចប្រើប្រាស់ Effects,
+            Filters និង Cloud Space កម្រិត Pro
+            ដើម្បីធ្វើឱ្យវីដេអូរបស់អ្នកមើលទៅអាជីព (Professional)។
+          </p>
+          <p>✅ No Ads & Share & private</p>
+          <p>✅ កម្រិតខ្ពស់ 4K</p>
+        </div>
+        <div class="price">តម្លៃ: <span>$2.50 - $5.00</span></div>
+        <button class="btn-buy" onclick="addToCart('Capcut Pro', 5.00)">
+          BUY NOW
+        </button>
+      </div>
+      <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/A4.jpg" alt="Boost Page" />
+        <h3>Boost Page </h3>
+        <div class="benefits">
+          <p>
+            ✅🔥 PROMOTION ពិសេស: បញ្ចុះតម្លៃ 20%🎉
+🎉សម្រាប់អតិថិជន ១០នាក់ដំបូងដែលចុះឈ្មោះថ្ងៃនេះ!🔥
+📩 ប្រឹក្សាយោបល់ឥតគិតថ្លៃឥឡូវនេះ៖
+🔗 : https://t.me/TheDigitalMarketingNew
+👉 Telegram: https://t.me/ChhaySemz
+📞 ទូរស័ព្ទ: 010827118 / 077772604
+🛒 Page: Software Tools
+"ជោគជ័យនៃអាជីវកម្មរបស់អ្នក គឺជាមោទនភាពរបស់យើង!"
+#softwaretools #DigitalMarketing #boosting
+          </p>
+          <p>✅FREE BOOST 7DAY</p>
+        </div>
+        <div class="price">តម្លៃ: <span>$45</span></div>
+        <button class="btn-buy" onclick="addToCart('Boost Page', 45.0)">
+          BUY NOW
+        </button>
+      </div>
+     <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/A2.jpg" alt="All in one" />
+        <h3>All in one for boost</h3>
+        <div class="benefits">
+          <p>
+            ✅
+នេះគឺជាអត្ថប្រយោជន៍នៃកញ្ចប់ "All In One for Boost" បែបខ្លី ខ្លឹម និងទាក់ទាញបំផុត៖
+
+ឧបករណ៍គ្រប់មុខក្នុងកញ្ចប់៖ ទទួលបាន Tools ល្បីៗទាំងអស់ (Canva, ChatGPT, Gemini, YouTube, Netflix, CapCut) ក្នុងពេលតែមួយ ងាយស្រួលគ្រប់គ្រងការងារ និងការកម្សាន្ត។
+
+បង្កើនល្បឿនការងារ Boost Page៖ រចនារូបភាពស្អាតៗជាមួយ Canva, សរសេរ Caption ទាក់ទាញជាមួយ AI និងកាត់តវីដេអូកម្រិតអាជីពជាមួយ CapCut ដើម្បីរុញលក់ឱ្យកាន់តែផ្ទុះ។
+
+សន្សំសំចៃថវិកាខ្ពស់៖ ចំណាយត្រឹមតែមួយកញ្ចប់ ប៉ុន្តែអាចប្រើប្រាស់បានគ្រប់សេវាកម្ម Premium ទាំងអស់ ចំណេញជាងការទិញដាច់ដោយឡែកពីគ្នា។
+
+ជំនួយការឆ្លាតវៃ ២៤/៧៖ មាន AI ចាំជួយគិតយុទ្ធសាស្ត្រលក់ និងដោះស្រាយបញ្ហាផេកបានគ្រប់ពេលវេលា។
+
+តុល្យភាពការងារ និងការកម្សាន្ត៖ ក្រៅពីជួយសម្រួលការងារ Boost Page ក៏មាន YouTube និង Netflix សម្រាប់សម្រាកលំហែកាយជាមួយគុណភាពកម្រិត 4K។
+
+"កញ្ចប់តែមួយ ជួយឱ្យអាជីវកម្មអនឡាញរបស់អ្នកដើរលឿនដូចហោះ!"
+          </p>
+         
+        </div>
+        <div class="price">តម្លៃ: <span>$60.00</span></div>
+        <button class="btn-buy" onclick="addToCart('All In One for Boost', 60.0)">
+          BUY NOW
+        </button>
+      </div>     
+         <div class="product-card">
+        <div class="badge">Best Seller</div>
+        <img src="img/A3.jpg" alt="Boost Page" />
+        <h3>Boost Page Ads / Live </h3>
+        <div class="benefits">
+          <p>
+            ✅នេះគឺជាអត្ថប្រយោជន៍នៃសេវាកម្ម Boost Page Ads / Live បែបខ្លី ខ្លឹម និងទាក់ទាញ៖
+
+ពង្រីកវិសាលភាព៖ ជួយឱ្យអាជីវកម្ម និងការ Live លក់ដូររបស់អ្នក បង្ហាញទៅកាន់អតិថិជនគោលដៅរាប់ម៉ឺននាក់ក្នុងពេលដ៏ខ្លី។
+
+បង្កើនការលក់៖ ទាក់ទាញអ្នកមើល (Viewers) និងការសាកសួរ (Inquiry) ច្រើនជាងមុន ដែលជួយរុញច្រានការបិទការលក់ឱ្យបានលឿន។
+
+កសាងទំនុកចិត្ត៖ បង្កើនចំនួន Like, Follow និងការចូលរួម (Engagement) ធ្វើឱ្យផេករបស់អ្នកមើលទៅមានវិជ្ជាជីវៈ និងគួរឱ្យជឿជាក់។
+
+ចំគោលដៅ ១០០%៖ កំណត់យកអតិថិជនតាម វ័យ, ភេទ, ទីតាំង និងចំណង់ចំណូលចិត្ត ចំអ្នកដែលត្រូវការផលិតផលរបស់អ្នកពិតៗ។
+
+បច្ចេកទេសស្តង់ដារ៖ រៀបចំ Ads និងគណនីឱ្យមានសុវត្ថិភាព ជៀសវាងការជាប់ Lock ឬខូចផេក។
+
+"ចំណាយតិច ចំគោលដៅ បង្កើនចំណូលទ្វេដង!"
+          </p>
+          
+        </div>
+        <div class="price">តម្លៃ: <span> 35$ - 50$ </span></div>
+        <button class="btn-buy" onclick="addToCart('Boost Page Ads / Live', 50.0)">
+          BUY NOW
+        </button>
+      </div>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 style="margin: 0">📦 កន្ត្រកទំនិញរបស់អ្នក</h3>
+          <span class="close-x" onclick="toggleCart()">&times;</span>
+        </div>
+
+        <div class="modal-body">
+          <div id="cart-items"></div>
+
+          <div class="cart-summary">
+            សរុប: <span id="cart-total">$0.00</span>
+          </div>
+
+          <div class="promo-box">
+            <input
+              type="text"
+              id="promo-code"
+              placeholder="កូដចុះថ្លៃ (FREE30)"
+            />
+            <button onclick="applyPromo()">ប្រើ</button>
+          </div>
+
+          <hr />
+
+          <input
+            type="text"
+            id="user-name"
+            placeholder="ឈ្មោះរបស់អ្នក"
+            class="input-field"
+          />
+          <input
+            type="text"
+            id="user-phone"
+            placeholder="លេខ Telegram"
+            class="input-field"
+          />
+
+          <div id="checkout-section" style="display: none">
+            <p class="qr-hint">📢 សូមស្កេនបង់ប្រាក់ រួច Upload វិក្កយបត្រ</p>
+            <img src="img/MyQr.jpg" alt="QR Code" class="qr-img" />
+
+            <p style="font-size: 12px; margin-bottom: 5px; text-align: left">
+              ជ្រើសរើសរូប Screenshot វិក្កយបត្រ:
+            </p>
+            <input
+              type="file"
+              id="screenshot-input"
+              accept="image/*"
+              style="width: 100%; margin-bottom: 15px"
+            />
+
+            <button onclick="contactAdmin()" class="btn-admin">
+              ទាក់ទង Admin 💬
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btn-main" onclick="startCheckout()" class="btn-checkout">
+            បន្តទៅការបង់ប្រាក់ 💳
+          </button>
+          <button onclick="toggleCart()" class="btn-close-text">បិទវិញ</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
